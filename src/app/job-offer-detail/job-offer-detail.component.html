@@ -1,0 +1,17 @@
+<div *ngIf="jobOffer" class="card">
+    <div class="card-header">
+        <h2>{{ jobOffer.titre }}</h2>
+    </div>
+    <div class="card-body">
+        <p><strong>Description:</strong> {{ jobOffer.description }}</p>
+        <p><strong>Contract:</strong> {{ jobOffer.contrat }}</p>
+        <p><strong>Company:</strong> {{ jobOffer.entreprise }}</p>
+        <p><strong>Salary:</strong> {{ jobOffer.salaire }}</p>
+        <p><strong>Education Level:</strong> {{ jobOffer.niveauEtude }}</p>
+        <p><strong>Status:</strong> {{ jobOffer.status }}</p>
+        <p><strong>Website:</strong> <a *ngIf="jobOffer.site_web" [href]="jobOffer.site_web">{{ jobOffer.site_web }}</a></p>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary">Postuler</button>
+    </div>
+</div>

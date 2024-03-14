@@ -1,0 +1,22 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  border: 1px solid black; /* Adjust color and width as needed */
+}
+
+.card__hero-alter-ego {
+  font-size: 24px;
+  color: #333;
+}
+
+.card__hero-real-name {
+  font-size: 18px;
+  color: #777;
+}
+
+.card-text {
+  margin-bottom: .5rem; /* Adjust as needed */
+}

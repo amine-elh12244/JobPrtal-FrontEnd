@@ -1,0 +1,85 @@
+<div class="container">
+
+
+    <nav class="p-2 m-2 border border-info">
+        <button   class="btn btn-outline-info" (click)="handleNewProduct()">
+            New Product
+        </button>
+    </nav>
+
+    <ng-template #errors>
+        <div class="text-danger">
+            {{errorMessage}}
+
+        </div>
+
+
+    </ng-template>
+    <div class="card" *ngIf="offers;else errors" >
+        <div class="card-header">
+            <h3>List Of Products</h3>
+
+        </div>
+
+        <div class="card-body">
+
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th> Référence</th>
+                    <th>Titre</th>
+                    <th>Date Activation</th>
+                    <th>Applications</th>
+                    <th>Vues</th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr *ngFor="let p of offers">
+                    <td>{{p.id}}</td>
+                    <td>{{p.nom}}</td>
+                     <td> <p>14/03/2024</p></td>
+                    <td>{{getViewCount(p.id)}}</td>
+                    <td>{{getViewCount(p.id)}}</td>
+
+
+
+
+
+
+                    <td  >
+                        <button class="btn btn-danger"   (click)="handleDeletProduct(p)">Delete</button>
+                    </td>
+
+                    <td  >
+                        <button class="btn btn-success"   (click)="handleEditProduct(p)">
+                            Edit
+                        </button>
+                    </td>
+
+
+
+
+
+                </tr>
+                </tbody>
+
+
+
+            </table>
+
+            <ul class="nav nav-pills">
+                <li *ngFor="let item of [].constructor(this.totalPages) ; let i=index">
+                    <a  (click)="gotoPage(i)" [ngClass]="i==CurrentPage?'btn-info':'btn-outline-info'"  class="btn  ms-1 mt-1">
+                        {{i+1}}
+                    </a>
+
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>

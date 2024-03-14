@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, PLATFORM_ID, Inject} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Job-Portal-Front';
+
+export class AppComponent  {
+
 }
