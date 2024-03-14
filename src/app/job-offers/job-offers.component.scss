@@ -1,0 +1,44 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 20px;
+}
+
+.card-text {
+  margin-bottom: .5rem;
+}
+
+.card__hero-alter-ego {
+  font-size: 24px;
+  color: #333;
+}
+
+.card__hero-real-name {
+  font-size: 18px;
+  color: #777;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

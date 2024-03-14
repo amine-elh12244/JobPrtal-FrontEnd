@@ -1,0 +1,68 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #2196f3;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body table {
+  width: 100%;
+}
+
+.card-body th,
+.card-body td {
+  padding: 8px;
+  text-align: center;
+}
+
+.card-body th {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.card-body tr:nth-child(even) {
+  background-color: #bbdefb;
+}
+
+.card-body tr:hover {
+  background-color: #90caf9;
+}
+
+.card-body .btn {
+  margin-right: 5px;
+}
+
+.nav-pills .btn {
+  margin-top: 5px;
+}
+
+.nav-pills .btn-outline-info {
+  color: #2196f3;
+  border-color: #2196f3;
+}
+
+.nav-pills .btn-info {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}

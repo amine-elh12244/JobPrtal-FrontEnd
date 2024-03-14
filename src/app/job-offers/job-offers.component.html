@@ -1,0 +1,59 @@
+<div class="container mt-4">
+  <!-- Search Inputs -->
+  <div class="row mb-3">
+    <div class="col-md-3">
+      <input [(ngModel)]="keyName" type="text" class="form-control" placeholder="Search by keyword">
+    </div>
+    <div class="col-md-3">
+      <select [(ngModel)]="ville" class="form-control" placeholder="City">
+        <option *ngFor="let v of villes">{{v.nom}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select [(ngModel)]="domaine" class="form-control" placeholder="Domain">
+        <option *ngFor="let d of domaines">{{d.nom}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select [(ngModel)]="niveauEtude" class="form-control" placeholder="Education level">
+        <option *ngFor="let n of yourListOfNiveau">{{n}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <button (click)="chercher()" class="btn btn-primary">Chercher</button>
+      <mat-spinner *ngIf="isLoading" diameter="30"></mat-spinner>
+    </div>
+  </div>
+
+  <!-- Job Offers List -->
+  <!-- Liste des offres d'emploi -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <h1 class="text-center mb-2">Job Offers</h1>
+      <p class="text-center mb-3">
+        These are the available job offers!
+      </p>
+      <div class="row">
+        <div *ngFor="let O of JobOffers" class="col-12 col-sm-6 col-lg-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <p class="card-text card__hero-alter-ego">{{ O.titre }}</p>
+              <small class="card-text card__hero-real-name">{{ O.entreprise }}</small>
+              <p class="card-text">{{ O.description }}</p>
+              <p class="card-text">Contract: {{ O.contrat }}</p>
+              <p class="card-text">Salary: {{ O.salaire }}</p>
+              <p class="card-text">Education Level: {{ O.niveauEtude }}</p>
+              <p class="card-text">Status: {{ O.status }}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="{{ O.site_web }}" target="_blank">Company Website</a>
+              <button class="btn btn-primary" [routerLink]="['/Employeur/JobOffers', O.id]" (click)="incrementViewCount(O.id)">More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
