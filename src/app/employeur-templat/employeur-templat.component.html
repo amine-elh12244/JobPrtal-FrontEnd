@@ -1,4 +1,5 @@
 <div class="sidebar">
+<<<<<<< HEAD
   <div class="logo-details">
     <i class="fa fa-bars"></i>
     <div class="logo_name">
@@ -61,3 +62,71 @@
   </ul>
 </div>
 <router-outlet></router-outlet>
+=======
+    <div class="logo-details">
+        <i class='fa fa-bars'></i>
+        <div class="logo_name"><img [src]="'assets/img/admin.png'" width="55" height="50"> Employeur </div>
+        <i class='fa' id="btn"></i>
+    </div>
+    <ul class="nav-list">
+        <li [routerLink]="['/Employeur/JobOffers']">
+            <a>
+                <i class='fa fa-edit'></i>
+                <span class="links_name">Job offers</span>
+            </a>
+            <span class="tooltip">Modifier Mon Profil</span>
+        </li>
+        <li [routerLink]="['/approveprofessor']">
+            <a>
+                <i class='fa fa-check-square'></i>
+                <span class="links_name">Statut</span>
+            </a>
+            <span class="tooltip">Statut</span>
+        </li>
+        <li [routerLink]="['/Employeur/AddJobOffer']">
+            <a>
+                <i class='fa fa-plus-square'></i>
+                <span class="links_name">Ajouter Job offer</span>
+            </a>
+            <span class="tooltip">Ajouter Job offer</span>
+        </li>
+        <!--!!!!!-->
+        <li [routerLink]="['/Employeur/MesAnnonces']">
+            <a>
+                <i class='fa fa-th-list'></i>
+                <span class="links_name">Mes Annonces ?</span>
+            </a>
+            <span class="tooltip">Mes Annonces</span>
+        </li>
+        <li [routerLink]="['/myinsc']">
+            <a>
+                <i class=' fa fa-address-card'></i>
+                <span class="links_name">Candidature recu ! </span>
+            </a>
+            <span class="tooltip">Candidature recu ! </span>
+        </li>
+        <li [routerLink]="['/studentsinsc']">
+            <a>
+                <i class='fa fa-user'></i>
+                <span class="links_name">Mon profile ! </span>
+            </a>
+            <span class="tooltip">Mon profile ! </span>
+        </li>
+
+
+        <li style="align-content: center;" class="profile">
+            <div class="profile-details">
+                <div class="name_job">
+                    <!--  <div style="align-content: center; font-weight: bolder;" class="name">{{loggedUser}}</div>-->
+                    <!--   <div class="job" style="align-content: center; font-weight: bolder;">Role : {{currRole}}</div>-->
+                </div>
+            </div>
+            <i class='bx bx-log-out' id="log_out"></i>
+        </li>
+
+    </ul>
+</div>
+<router-outlet>
+
+</router-outlet>
+>>>>>>> origin/master

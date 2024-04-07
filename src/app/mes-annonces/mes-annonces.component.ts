@@ -12,7 +12,11 @@ import {EmployeurService} from "../Services/employeur.service";
 })
 export class MesAnnoncesComponent implements OnInit{
 
+<<<<<<< HEAD
   offers: any[] = [];
+=======
+  offers! : Array<any>;
+>>>>>>> origin/master
   CurrentPage : number = 0;
   pageSize : number = 7;
   totalPages : number = 0;
@@ -35,6 +39,7 @@ export class MesAnnoncesComponent implements OnInit{
     }
 
   ngOnInit(): void {
+<<<<<<< HEAD
     this.employeurService.getJobOffersByEmployerId(1).subscribe(data => {
       this.offers = data.offresEmploi; // Assign the offresEmploi property to offers
     });
@@ -85,4 +90,26 @@ export class MesAnnoncesComponent implements OnInit{
 }
 
 
+=======
+
+    this.handleGetAPageProcuts();
+
+  }
+
+  handleGetAPageProcuts(){
+      const employerId =  Number(this.authService.authenticatedEmployerId)
+      this.employeurService.getJobOffersByEmployerId(employerId).subscribe(
+          data => {
+              this.offers = data;
+          },
+          error => {
+              console.error('Error:', error);
+          }
+      );
+  }
+
+  }
+
+
+>>>>>>> origin/master
 

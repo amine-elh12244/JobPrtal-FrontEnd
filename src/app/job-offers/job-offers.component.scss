@@ -4,6 +4,7 @@
 }
 
 .card {
+<<<<<<< HEAD
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -21,6 +22,9 @@
 
 .card-text {
   margin-bottom: .5rem;
+=======
+  border: 1px solid black; /* Adjust color and width as needed */
+>>>>>>> origin/master
 }
 
 .card__hero-alter-ego {
@@ -33,6 +37,7 @@
   color: #777;
 }
 
+<<<<<<< HEAD
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -41,4 +46,8 @@
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+=======
+.card-text {
+  margin-bottom: .5rem; /* Adjust as needed */
+>>>>>>> origin/master
 }

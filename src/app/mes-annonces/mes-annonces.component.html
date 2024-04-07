@@ -2,8 +2,13 @@
 
 
     <nav class="p-2 m-2 border border-info">
+<<<<<<< HEAD
         <button   class="btn btn-outline-info" [routerLink]="['/Employeur/AddJobOffer']">
             New Job offer
+=======
+        <button   class="btn btn-outline-info" (click)="handleNewProduct()">
+            New Product
+>>>>>>> origin/master
         </button>
     </nav>
 
@@ -17,7 +22,11 @@
     </ng-template>
     <div class="card" *ngIf="offers;else errors" >
         <div class="card-header">
+<<<<<<< HEAD
             <h3>My List Of Job offers</h3>
+=======
+            <h3>List Of Products</h3>
+>>>>>>> origin/master
 
         </div>
 
@@ -37,9 +46,15 @@
                 </thead>
 
                 <tbody>
+<<<<<<< HEAD
                 <tr *ngFor="let p of  offers ">
                     <td>{{p.id}}</td>
                     <td>{{p.titre}}</td>
+=======
+                <tr *ngFor="let p of offers">
+                    <td>{{p.id}}</td>
+                    <td>{{p.nom}}</td>
+>>>>>>> origin/master
                      <td> <p>14/03/2024</p></td>
                     <td>{{getViewCount(p.id)}}</td>
                     <td>{{getViewCount(p.id)}}</td>
@@ -50,6 +65,7 @@
 
 
                     <td  >
+<<<<<<< HEAD
                         <button class="btn btn-danger"   (click)="handleDeleteOffer(p)">Delete</button>
                     </td>
 
@@ -57,6 +73,14 @@
                         <button class="btn btn-success"    [routerLink]="['/Employeur/MesAnnonces/EditJobOffer', p.id]" >
                             Edit
 
+=======
+                        <button class="btn btn-danger"   (click)="handleDeletProduct(p)">Delete</button>
+                    </td>
+
+                    <td  >
+                        <button class="btn btn-success"   (click)="handleEditProduct(p)">
+                            Edit
+>>>>>>> origin/master
                         </button>
                     </td>
 

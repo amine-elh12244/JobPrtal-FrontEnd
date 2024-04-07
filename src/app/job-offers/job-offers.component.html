@@ -28,7 +28,10 @@
   </div>
 
   <!-- Job Offers List -->
+<<<<<<< HEAD
   <!-- Liste des offres d'emploi -->
+=======
+>>>>>>> origin/master
   <div class="row mb-5">
     <div class="col-12">
       <h1 class="text-center mb-2">Job Offers</h1>
@@ -49,9 +52,14 @@
             </div>
             <div class="card-footer d-flex justify-content-between">
               <a href="{{ O.site_web }}" target="_blank">Company Website</a>
+<<<<<<< HEAD
               <button class="btn btn-primary" [routerLink]="['/Employeur/JobOffers', O.id]" (click)="incrementViewCount(O.id)">More</button>
             </div>
           </div>
+=======
+            </div>
+            <button class="btn btn-primary" [routerLink]="['/JobOffers', O.id]" (click)="incrementViewCount(O.id)">More</button>          </div>
+>>>>>>> origin/master
         </div>
       </div>
     </div>

@@ -1,0 +1,55 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  color: #1976d2;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+}
+
+.btn-primary:disabled {
+  background-color: #b3e5fc;
+  cursor: not-allowed;
+}
+
+.card-footer {
+  margin-top: 20px;
+  text-align: center;
+}
