@@ -4,6 +4,7 @@ import {DomaineServiceService} from "../Services/domaine-service.service";
 import {VilleServiceService} from "../Services/ville-service.service";
 import { MatProgressSpinnerModule }  from '@angular/material/progress-spinner';
 import {ViewCountServiceService} from "../Services/view-count-service.service";
+import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
 
 
 @Component({
@@ -31,7 +32,8 @@ export class JobOffersComponent implements OnInit {
     constructor(private  JobOffersService:JobOffersService,
                 private domaineService: DomaineServiceService,
                 private villeService: VilleServiceService,
-                private  viewCountServiceService : ViewCountServiceService) {
+                private  viewCountServiceService : ViewCountServiceService,
+                private sanitizer: DomSanitizer) {
     }
 
     ngOnInit(): void {
@@ -84,6 +86,13 @@ export class JobOffersComponent implements OnInit {
                 this.isLoading = false;
             });
         }
+    }
+
+    getImageData(blob: Blob): SafeUrl {
+        let reader = new FileReader();
+        reader.readAsDataURL(blob);
+        let url = reader.result;
+        return this.sanitizer.bypassSecurityTrustUrl(url as string);
     }
 
     incrementViewCount(id: number): void {

@@ -13,12 +13,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { EmployeurTemplatComponent } from './employeur-templat/employeur-templat.component';
 import { MesAnnoncesComponent } from './mes-annonces/mes-annonces.component';
-<<<<<<< HEAD
+
 import { EditJobOfferComponent } from './edit-job-offer/edit-job-offer.component';
 import { MonprofileComponent } from './monprofile/monprofile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
-=======
->>>>>>> origin/master
+
 
 
 @NgModule({
@@ -29,15 +28,14 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     AddJobOfferComponent,
     JobOfferDetailComponent,
     EmployeurTemplatComponent,
-<<<<<<< HEAD
+
     MesAnnoncesComponent,
     EditJobOfferComponent,
     MonprofileComponent,
-    EditProfileComponent
-=======
+    EditProfileComponent,
+
     MesAnnoncesComponent
->>>>>>> origin/master
-  ],
+   ],
   imports: [
    MatProgressSpinnerModule,
     BrowserModule,

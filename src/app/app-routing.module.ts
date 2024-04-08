@@ -7,12 +7,11 @@ import {JobOfferDetailComponent} from "./job-offer-detail/job-offer-detail.compo
 import {EmployeurTemplatComponent} from "./employeur-templat/employeur-templat.component";
 import {AuthenticationGuard} from "./guards/auth.guard";
 import {MesAnnoncesComponent} from "./mes-annonces/mes-annonces.component";
-<<<<<<< HEAD
+
 import {EditJobOfferComponent} from "./edit-job-offer/edit-job-offer.component";
 import {MonprofileComponent} from "./monprofile/monprofile.component";
 import {EditProfileComponent} from "./edit-profile/edit-profile.component";
-=======
->>>>>>> origin/master
+
 
 const routes: Routes = [
   { path: 'LogIn',  component: LogInComponent },
@@ -28,14 +27,13 @@ const routes: Routes = [
       { path: 'AddJobOffer',  component: AddJobOfferComponent },
       { path: 'JobOffers/:id', component: JobOfferDetailComponent },
       { path: 'MesAnnonces', component: MesAnnoncesComponent },
-<<<<<<< HEAD
+
       { path: 'MesAnnonces/EditJobOffer/:id', component: EditJobOfferComponent },
       { path: 'Monprofile', component: MonprofileComponent },
       { path: 'Monprofile/Edit', component: EditProfileComponent },
 
 
-=======
->>>>>>> origin/master
+
 
 
 

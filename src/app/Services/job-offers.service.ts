@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-<<<<<<< HEAD
+
 import {JobOffer} from "../model/JobOffer";
-=======
->>>>>>> origin/master
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,18 +22,17 @@ export class JobOffersService {
     return this.http.get(this.host+"/villes");
   }
 
-    public getOffers(){
+    public getOffers()  {
         console.log('URL:', this.host+"/offres-emploi"); // Debugging log to check the URL
         return this.http.get(this.host+"/offres-emploi");
     }
 
-  public getOffer(id: any){
+  public getOffer(id: any)  {
     console.log('URL:', this.host+"/offres-emploi/"+id); // Debugging log to check the URL
-<<<<<<< HEAD
+
     return this.http.get<JobOffer>(this.host+"/offres-emploi/"+id);
-=======
-    return this.http.get(this.host+"/offres-emploi/"+id);
->>>>>>> origin/master
+
+
   }
 
     searchOffresEmploi(ville: string, niveauEtude: string, domaine: string, keyName: string)   {

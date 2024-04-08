@@ -1,27 +1,25 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-<<<<<<< HEAD
-import {JobOffer} from "../model/JobOffer";
-=======
->>>>>>> origin/master
+ import {JobOffer} from "../model/JobOffer";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeurService {
-<<<<<<< HEAD
+
   private apiUrl = 'http://localhost:8089/employeurs/'; // Replace with your API URL
   private jobOffersUrl = 'http://localhost:8089/offres-emploi/'; // Replace with your job offers API URL
 
-=======
-  private apiUrl = 'http://localhost:8089/employeurs'; // Replace with your API URL
->>>>>>> origin/master
+
+
+
 
   constructor(private http: HttpClient) {}
 
   getJobOffersByEmployerId(id: number): Observable<any> {
-<<<<<<< HEAD
+
     console.log('URL:', this.apiUrl+id); // Debugging log to check the URL
     return this.http.get(this.apiUrl+id);
   }
@@ -47,8 +45,7 @@ export class EmployeurService {
   }
 
 
-=======
-    return this.http.get(`${this.apiUrl}/${id}`);
-  }
->>>>>>> origin/master
+
+
+
 }
